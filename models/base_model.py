@@ -24,6 +24,7 @@ class BaseModel:
                     setattr(self, key, value)
                 elif key != "__class__":
                     self.__dict__[key] = value
+                setattr(self, key, value)
         else:
             self.id = str(uuid4())
             self.created_at = datetime.now()
