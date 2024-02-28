@@ -18,8 +18,10 @@ class BaseModel:
         dateformat = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs:
             for key, value in kwargs.items():
+                if key == "__class__":
+                    continue
                 if key == "created_at" or key == "updated_at":
-                    self.__dict__[key] = datetime.strptime(value, dateformat)
+                    value == datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 elif key != "__class__":
                     self.__dict__[key] = value
         else:
@@ -46,8 +48,11 @@ class BaseModel:
         """
         Returns a dictionary containing all keys/values of __dict__
         """
-        new_dict = self.__dict__.copy()
-        new_dict["__class__"] = self.__class__.__name__
-        new_dict["created_at"] = self.created_at.isoformat()
-        new_dict["updated_at"] = self.update_at.isoformat()
-        return new_dict
+        my_dict = {}
+        my_dict["__class__"] = self.__class__.__name__
+        for key, value in self.__dict__.items():
+            if type(value) is datetime:
+                my_dict[key] = value.isoformat()
+            else:
+                my_dict[key] = value
+        return my_dict
