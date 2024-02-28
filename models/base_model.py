@@ -4,6 +4,7 @@ Class BaseModel
 """
 from uuid import uuid4
 from datetime import datetime
+from models.engine.file_storage import FileStorage
 import models
 
 
