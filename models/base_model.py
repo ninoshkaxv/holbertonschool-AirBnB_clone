@@ -21,6 +21,7 @@ class BaseModel:
                     continue
                 if key == "created_at" or key == "updated_at":
                     value == datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    setattr(self, key, value)
                 elif key != "__class__":
                     self.__dict__[key] = value
         else:
