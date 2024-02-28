@@ -9,7 +9,7 @@ import models
 
 class BaseModel:
     """
-    Base class for the Airbnb project
+    Base class for the Airbnb project with the principal funtion to inherit
     """
     def __init__(self, *args, **kwargs):
         """
