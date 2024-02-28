@@ -1,2 +1,2 @@
-![github-header-image(14)](https://github.com/ninoshkaxv/holbertonschool-AirBnB_clone/assets/143634181/c80dfe10-9e4b-439f-8885-9feeb93068dd)
+![github-header-image(18)](https://github.com/ninoshkaxv/holbertonschool-AirBnB_clone/assets/143634181/ec0d1dd4-ea68-4d45-9477-fa5fdcc71b7d)
 
