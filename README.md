@@ -8,7 +8,7 @@ This is the first part of the Holberton project "AirBnB_clone". This project aim
 
 Clone this repository:
 ```
-git clone
+git clone git@github.com:ninoshkaxv/holbertonschool-AirBnB_clone.git
 ```
 
 # 💻Command Interpreter:
