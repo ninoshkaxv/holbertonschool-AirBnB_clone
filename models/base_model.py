@@ -4,6 +4,7 @@ Class BaseModel
 """
 from uuid import uuid4
 from datetime import datetime
+from models.engine.file_storage import FileStorage
 import models
 
 
@@ -20,12 +21,13 @@ class BaseModel:
                 if key == "__class__":
                     continue
                 if key == "created_at" or key == "updated_at":
-                    value == datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
                 elif key != "__class__":
                     self.__dict__[key] = value
         else:
             self.id = str(uuid4())
-            self.created_at = datetime.now()
+            self.created_at = datetime.datetime()
             self.updated_at = self.created_at
             models.storage.new(self)
             models.storage.save()
