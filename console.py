@@ -157,7 +157,6 @@ class HBNBCommand(cmd.Cmd):
         else:
             print("** no instance found **")
 
-    
     def default(self, args):
         """Handle cmd in format <class name>.cmd()\n"""
         arg = args.split(".")
