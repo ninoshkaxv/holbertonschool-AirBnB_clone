@@ -9,23 +9,22 @@ import models
 
 class BaseModel:
     """
-    Base class for the Airbnb project with the principal funtion to inherit
+    Base class for the Airbnb project that inherits
     """
     def __init__(self, *args, **kwargs):
         """
         Initialises a BaseModel instance
         """
+        dateformat = "%Y-%m-%dT%H:%M:%S.%f"
         if kwargs:
             for key, value in kwargs.items():
-                if key == "__class__":
-                    continue
                 if key == "created_at" or key == "updated_at":
-                    value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+                    self.__dict__[key] = datetime.strptime(value, dateformat)
                 elif key != "__class__":
                     self.__dict__[key] = value
         else:
             self.id = str(uuid4())
-            self.created_at = datetime.datetime()
+            self.created_at = datetime.now()
             self.updated_at = self.created_at
             models.storage.new(self)
             models.storage.save()
