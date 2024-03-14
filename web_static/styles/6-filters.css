@@ -62,6 +62,7 @@
     width: 20%;
     border: none;
     border-radius: 4px;
+    margin-right: 20px;
 }
 
 .filters button:hover {
