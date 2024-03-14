@@ -3,25 +3,9 @@ header {
     height: 70px;
     width: 100%;
     border-bottom: 1px solid #CCCCCC;
-}
-
-.logo-container {
-    height: 100%;
-    display: flex;
-    align-items: center;
-    padding-left: 20px;
-}
-
-.logo {
-    background-image: url('../images/logo.png');
+    background-image: url(../images/logo.png);
     background-repeat: no-repeat;
-    width: 50px; 
-    height: 60px;
-    margin-right: 20px;
 }
-
-h1 {
-    margin-left: 10px;
-    color: white;
-    font-size: 24px;
+header.logo {
+    margin-left: 20px;
 }
