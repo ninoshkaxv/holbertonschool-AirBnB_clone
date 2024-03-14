@@ -7,6 +7,7 @@
     width: 100%;
     border: 1px solid #DDDDDD;
     border-radius: 4px;
+    margin-bottom: 20px;
 }
 
 .filters div {
@@ -15,12 +16,12 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 15px; /* Add some padding to the left and right */
-    position: relative; /* Needed to position the popover */
+    position: relative;
 }
 
 .filters .locations {
     border-right: 1px solid #DDDDDD;
+    padding: 0 15px;
 }
 
 .filters h3 {
